@@ -589,7 +589,7 @@ function Details() {
 
                         <div className="relative w-[300px] h-16 overflow-hidden">
                           <div 
-                            className="flex gap-3 absolute transition-transform duration-300 ease-in-out"
+                            className="flex gap-1 absolute transition-transform duration-300 ease-in-out"
                             style={{ 
                               transform: `translateX(-${thumbnailStartIndex * 108}px)`,
                               width: `${totalThumbnails * 108}px`
