@@ -693,13 +693,13 @@ function Details() {
 
                 {game.fullDescription?.map((section, idx) => (
                   <div key={idx} className="mt-6">
-                    <h2 className="text-lg sm:text-xl font-bold mb-3">{section.heading}</h2>
+                    <h2 className="text-base sm:text-xl font-bold mb-3">{section.heading}</h2>
                     <p className="text-gray-300 text-sm sm:text-base leading-relaxed">{section.content}</p>
                   </div>
                 ))}
                 {isBaseGame && (
                   <div className="mt-8">
-                    <h2 className="text-lg sm:text-xl font-bold mb-6">{game.title} System Requirements</h2>
+                    <h2 className="text-base sm:text-xl font-bold mb-6">{game.title} System Requirements</h2>
                     
                     {game.platforms?.includes('Windows') && (
                       <div className="bg-[#202024] rounded-xl p-6 mb-6 font-semibold">
