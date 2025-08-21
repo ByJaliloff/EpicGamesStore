@@ -348,12 +348,12 @@ function Slider({ slides, games }) {
           </div>
         </div>
 
-        <div className="flex justify-center mt-4 gap-2">
+        <div className="flex justify-center mt-4 gap-3">
           {slides.map((_, index) => (
             <button
               key={index}
               onClick={() => handleThumbnailClick(index)}
-              className={`w-2 h-2 rounded-full transition-all duration-300 cursor-pointer ${
+              className={`w-1.5 h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
                 index === activeIndex ? "bg-white" : "bg-gray-400/40"
               }`}
             />
