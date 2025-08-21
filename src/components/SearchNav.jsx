@@ -185,7 +185,7 @@ export default function SearchNav() {
                       className="w-11 h-14 rounded object-cover"
                     />
                     <div className="flex flex-col">
-                      <span className="text-xs text-[#ffffffa6] font-semibold mb-[2px] tracking-wider">
+                      <span className="text-xs text-[#ffffffa6] font-semibold mb-[2px] tracking-wide">
                         {item.type === "addon"
                           ? "Add-On"
                           : item.type === "edition"
@@ -196,7 +196,7 @@ export default function SearchNav() {
                           ? "Editor"
                           : "Base Game"}
                       </span>
-                      <span className="font-bold text-sm leading-tight text-[#ffffff] tracking-wider">
+                      <span className="font-bold text-sm leading-tight text-[#ffffff] tracking-wide">
                         {highlightText(item.title, query)}
                       </span>
                     </div>

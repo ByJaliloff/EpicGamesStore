@@ -843,9 +843,9 @@ function HomeAdminPanel() {
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Epic_Games_logo.svg/1200px-Epic_Games_logo.svg.png"
             alt="Epic Games"
-            className="w-12 h-12"
+            className="w-12 h-14"
           />
-          <span className="ml-3 text-xl font-bold">Epic Admin</span>
+          <span className="ml-3 text-xl font-bold">Epic Games</span>
         </div>
 
         <nav className="mt-8 px-4">
@@ -867,12 +867,6 @@ function HomeAdminPanel() {
             );
           })}
         </nav>
-        <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-gray-700/50">
-          <button className="w-full flex items-center px-4 py-3 text-gray-300 hover:bg-gray-700/50 hover:text-white rounded-lg transition-colors">
-            <LogOut className="w-5 h-5 mr-3" />
-            Log Out
-          </button>
-        </div>
       </div>
 
       <div className="ml-64 pt-[85px]">

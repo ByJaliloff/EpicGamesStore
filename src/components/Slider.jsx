@@ -35,13 +35,17 @@ function Slider({ slides, games }) {
 
   const activeSlide = slides[activeIndex];
 
-  const getButtonLabel = (price) => {
-    if (!price) return "Buy Now";
+  const getButtonLabel = (price, gameId) => {
+    // Find the game to check its release date
+    const game = games.find(g => g.id === gameId);
+    const isUpcoming = game?.releaseDate === "upcoming";
+    
+    if (!price) return isUpcoming ? "Pre-Purchase" : "Buy Now";
     const lowerPrice = price.toLowerCase();
     if (lowerPrice === "free") return "Play for Free";
     if (lowerPrice === "varies") return "Save Now";
     if (lowerPrice === "news") return "Learn More";
-    return "Buy Now";
+    return isUpcoming ? "Pre-Purchase" : "Buy Now";
   };
 
   const handleBuyNow = () => {
@@ -180,7 +184,7 @@ function Slider({ slides, games }) {
           onClick={() => {
             if (window.innerWidth < 768) handleBuyNow();
           }}
-          className="flex-1 relative rounded-2xl overflow-hidden cursor-pointer"
+          className="flex-1 relative rounded-2xl overflow-hidden"
           style={{ height: `${slides.length * 88}px` }} 
         >
           <img
@@ -230,15 +234,15 @@ function Slider({ slides, games }) {
               <div className="gap-3 hidden md:flex mt-4">
                 <button
                   onClick={handleBuyNow}
-                  className="bg-white w-[150px] text-black px-6 py-3 rounded-md text-sm font-medium hover:bg-gray-100 transition-colors"
+                  className="bg-white w-[150px] text-black px-6 py-3 rounded-md text-sm font-medium hover:bg-gray-100 transition-colors cursor-pointer"
                 >
-                  {getButtonLabel(activeSlide.price)}
+                  {getButtonLabel(activeSlide.price, activeSlide.gameId)}
                 </button>
 
 {!["varies", "news"].includes(activeSlide.price?.toLowerCase()) && (
   <button
     onClick={toggleWishlist}
-    className={`flex items-center gap-1 text-sm px-4 py-2 rounded transition w-[150px] ${
+    className={`flex items-center gap-1 text-sm px-4 py-2 rounded transition w-[150px] cursor-pointer ${
       isInWishlist
         ? "bg-white/10 text-gray-300 hover:bg-white/20"
         : "text-white hover:bg-white/10"

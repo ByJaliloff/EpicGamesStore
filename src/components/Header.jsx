@@ -273,7 +273,7 @@ function Header() {
           </div>
 
           <nav className="hidden md:flex items-center text-sm font-semibold">
-            <Link to="/support" className="hover:text-gray-300 p-[10px_12px]">Support</Link>
+            <Link  className="hover:text-gray-300 p-[10px_12px]">Support</Link>
             <div className="relative group">
               <button className="hover:text-gray-300 p-[10px_12px]">Distribute ▾</button>
             </div>

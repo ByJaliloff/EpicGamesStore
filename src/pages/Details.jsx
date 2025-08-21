@@ -646,11 +646,11 @@ function Details() {
                         </div>
 
                         {validMedia.images.length > 1 && (
-                          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10 bg-black/40 backdrop-blur-sm px-3 py-2 rounded-full">
+                          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-10 bg-black/40 backdrop-blur-sm px-3 py-1 rounded-full">
                             {validMedia.images.map((_, i) => (
                               <div
                                 key={i}
-                                className={`w-2 h-2 rounded-full cursor-pointer transition-all duration-300 ${
+                                className={`w-1 h-1 rounded-full cursor-pointer transition-all duration-300 ${
                                   i === mobileIndex ? "bg-white scale-125" : "bg-gray-400 hover:bg-gray-300"
                                 }`}
                                 onClick={() => setMobileIndex(i)}
@@ -677,7 +677,7 @@ function Details() {
                     <h3 className="text-gray-400 text-sm font-semibold mb-3">Genres</h3>
                     <div className="flex gap-2 flex-wrap">
                       {game.genre?.map((g, idx) => (
-                        <span key={idx} className="bg-[#343437] hover:bg-[#404043] transition-colors text-xs sm:text-sm px-3 py-1.5 rounded-md">{g}</span>
+                        <span key={idx} className="bg-[#343437] hover:bg-[#404043] transition-colors text-xs sm:text-sm px-3 py-1.5 rounded-md font-semibold">{g}</span>
                       ))}
                     </div>
                   </div>
@@ -685,7 +685,7 @@ function Details() {
                     <h3 className="text-gray-400 text-sm font-semibold mb-3">Features</h3>
                     <div className="flex gap-2 flex-wrap">
                       {game.features?.map((f, idx) => (
-                        <span key={idx} className="bg-[#343437] hover:bg-[#404043] transition-colors text-xs sm:text-sm px-3 py-1.5 rounded-md">{f}</span>
+                        <span key={idx} className="bg-[#343437] hover:bg-[#404043] transition-colors text-xs sm:text-sm px-3 py-1.5 rounded-md font-semibold">{f}</span>
                       ))}
                     </div>
                   </div>
@@ -699,7 +699,7 @@ function Details() {
                 ))}
                 {isBaseGame && (
                   <div className="mt-8">
-                    <h2 className="text-xl  font-bold mb-6">{game.title} System Requirements</h2>
+                    <h2 className="text-lg sm:text-xl font-bold mb-6">{game.title} System Requirements</h2>
                     
                     {game.platforms?.includes('Windows') && (
                       <div className="bg-[#202024] rounded-xl p-6 mb-6 font-semibold">
@@ -713,30 +713,30 @@ function Details() {
                             <div className="space-y-4 text-sm">
                               <div>
                                 <span className="text-[#ffffffa6] block mb-1">Windows OS</span>
-                                <span className="text-white text-base">64-bit Windows 10</span>
+                                <span className="text-white text-sm sm:text-base">64-bit Windows 10</span>
                               </div>
                               <div>
                                 <span className="text-[#ffffffa6] block mb-1">Windows Processor</span>
-                                <div className="text-white text-base">
+                                <div className="text-white text-sm sm:text-base">
                                   <div>Processor (AMD): AMD FX 6350</div>
                                   <div>Processor (Intel): Intel Core i5 6600K</div>
                                 </div>
                               </div>
                               <div>
                                 <span className="text-[#ffffffa6] block mb-1">Windows Memory</span>
-                                <span className="text-white text-base">8GB</span>
+                                <span className="text-white text-sm sm:text-base">8GB</span>
                               </div>
                               <div>
                                 <span className="text-[#ffffffa6] block mb-1">Windows Storage</span>
-                                <span className="text-white text-base">60GB</span>
+                                <span className="text-white text-sm sm:text-base">60GB</span>
                               </div>
                               <div>
                                 <span className="text-[#ffffffa6] block mb-1">Windows DirectX</span>
-                                <span className="text-white text-base">11</span>
+                                <span className="text-white text-sm sm:text-base">11</span>
                               </div>
                               <div>
                                 <span className="text-[#ffffffa6] block mb-1">Windows Graphics</span>
-                                <div className="text-white text-base">
+                                <div className="text-white text-sm sm:text-base">
                                   <div>Graphics card (AMD): AMD Radeon™ HD 7850 2GB</div>
                                   <div>Graphics card (NVIDIA): NVIDIA GeForce® GTX 660 2GB</div>
                                 </div>
@@ -749,30 +749,30 @@ function Details() {
                             <div className="space-y-4 text-sm">
                               <div>
                                 <span className="text-[#ffffffa6] block mb-1">Windows OS</span>
-                                <span className="text-white text-base">64-bit Windows 10 or later</span>
+                                <span className="text-white text-sm sm:text-base">64-bit Windows 10 or later</span>
                               </div>
                               <div>
                                 <span className="text-[#ffffffa6] block mb-1">Windows Processor</span>
-                                <div className="text-white text-base">
+                                <div className="text-white text-sm sm:text-base">
                                   <div>Processor (AMD): AMD FX 8350 Wraith</div>
                                   <div>Processor (Intel): Intel Core i7 6700 or equivalent</div>
                                 </div>
                               </div>
                               <div>
                                 <span className="text-[#ffffffa6] block mb-1">Windows Memory</span>
-                                <span className="text-white text-base">16GB</span>
+                                <span className="text-white text-sm sm:text-base">16GB</span>
                               </div>
                               <div>
                                 <span className="text-[#ffffffa6] block mb-1">Windows Storage</span>
-                                <span className="text-white text-base">60GB</span>
+                                <span className="text-white text-sm sm:text-base">60GB</span>
                               </div>
                               <div>
                                 <span className="text-[#ffffffa6] block mb-1">Windows DirectX</span>
-                                <span className="text-white text-base">11</span>
+                                <span className="text-white text-sm sm:text-base">11</span>
                               </div>
                               <div>
                                 <span className="text-[#ffffffa6] block mb-1">Windows Graphics</span>
-                                <div className="text-white text-base">
+                                <div className="text-white text-sm sm:text-base">
                                   <div>Graphics card (AMD): AMD Radeon™ RX 480 4GB</div>
                                   <div>Graphics card (NVIDIA): NVIDIA GeForce® GTX 1060 3GB</div>
                                 </div>
@@ -785,7 +785,7 @@ function Details() {
 
                     <div className="bg-[#202024] rounded-xl p-6 mb-6 font-semibold">
                       <h4 className="text-sm font-semibold text-[#ffffffa6] mb-4">Login Accounts Required</h4>
-                      <div className="text-white text-base">
+                      <div className="text-white text-sm sm:text-base">
                         {game.publisher?.toLowerCase().includes('electronic arts') || game.publisher?.toLowerCase().includes('ea') ? (
                           <span>The EA app</span>
                         ) : game.publisher?.toLowerCase().includes('ubisoft') ? (
@@ -801,7 +801,7 @@ function Details() {
                     {(game.language || game.supportedLanguages) && (
                       <div className="bg-[#202024] rounded-xl p-6 font-semibold">
                         <h4 className="text-sm font-semibold text-[#ffffffa6] mb-4">Languages Supported</h4>
-                        <div className="text-white text-base">
+                        <div className="text-white text-sm sm:text-base">
                           <div className="mb-2">
                             <span className="text-[#ffffffa6]">Audio: </span>
                             <span>{game.languages?.audio?.join(', ') || 'English, Italian, Spanish - Spain, French, German, Polish, Portuguese - Brazil, Spanish - Latin America'}</span>
@@ -898,7 +898,7 @@ function Details() {
                             : isFree
                               ? "Get"
                               : game.releaseDate?.toLowerCase() === "upcoming"
-                                ? "Pre-purchase"
+                                ? "Pre-Purchase"
                                 : "Buy Now"}
                       </button>
 
