@@ -1,0 +1,11 @@
+.custom-toast {
+  background: #1a1a1a;
+  color: white;
+  min-width: 400px;
+}
+
+@media (max-width: 480px) {
+  .custom-toast {
+    min-width: 320px; 
+  }
+}
