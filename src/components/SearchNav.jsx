@@ -103,7 +103,7 @@ export default function SearchNav() {
             <input
               type="text"
               placeholder="Search store"
-              className="bg-transparent outline-none placeholder-gray-400 text-white w-full"
+              className="bg-transparent outline-none placeholder-gray-400 text-white w-full font-semibold"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               onKeyDown={handleSearch}
