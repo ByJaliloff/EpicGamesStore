@@ -574,7 +574,7 @@ function Details() {
                       )}
                     </div>
                     {validMedia.totalCount > 1 && (
-                      <div className="hidden md:flex items-center gap-4 mt-4 justify-center max-w-[500px] mx-auto">
+                      <div className="hidden md:flex items-center gap-6 mt-4 justify-center max-w-[500px] mx-auto">
                         {totalThumbnails > thumbnailsPerView && (
                           <button 
                             onClick={prevThumbnails}
@@ -587,9 +587,9 @@ function Details() {
                           </button>
                         )}
 
-                        <div className="relative w-[300px] h-16 overflow-hidden">
+                        <div className="relative w-[330px] h-16 overflow-hidden">
                           <div 
-                            className="flex gap-1 absolute transition-transform duration-300 ease-in-out"
+                            className="flex gap-4 absolute transition-transform duration-300 ease-in-out"
                             style={{ 
                               transform: `translateX(-${thumbnailStartIndex * 108}px)`,
                               width: `${totalThumbnails * 108}px`

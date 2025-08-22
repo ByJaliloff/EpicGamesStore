@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import SearchNav from "../components/SearchNav";
 import { GameContext } from "../context/DataContext";
+import Loader from "../components/Loader";
+import Error from "./Error";
 
 const getDateValue = (dateStr) => {
   if (dateStr === "now") return 0;
@@ -18,11 +20,14 @@ const getDateValue = (dateStr) => {
 };
 
 export default function NewsSection() {
-  const { news } = useContext(GameContext);
+  const { news, error, loading } = useContext(GameContext);
 
   const sortedNews = [...news].sort((a, b) => {
     return getDateValue(a.date) - getDateValue(b.date);
   });
+
+    if (loading) return <Loader />;
+    if (error) return <Error />;
 
   return (
     <>
@@ -43,7 +48,7 @@ export default function NewsSection() {
                   rel="noopener noreferrer"
                   className="block rounded-lg mb-4 overflow-hidden"
                 >
-                  <img src={newsItem.image} alt={newsItem.title} className="rounded-lg w-full h-40 sm:h-48 md:h-56 lg:h-72.5 object-cover transition duration-300 filter hover:brightness-120" />
+                  <img src={newsItem.image} alt={newsItem.title} className="rounded-lg w-full h-45 sm:h-48 md:h-56 lg:h-72.5 object-cover transition duration-300 filter hover:brightness-120" />
                 </a>
 
                 <div className="flex flex-col flex-1">
